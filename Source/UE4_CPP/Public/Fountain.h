@@ -10,8 +10,8 @@ UCLASS()
 class UE4_CPP_API AFountain : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
+
+public:
 	// Sets default values for this actor's properties
 	AFountain();
 
@@ -21,22 +21,26 @@ protected:
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 	virtual void PostInitializeComponents() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* Body;
-	
-	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* Water;
+		UStaticMeshComponent* Body;
 
 	UPROPERTY(VisibleAnywhere)
-	UPointLightComponent *Light;
-	
-	UPROPERTY(VisibleAnywhere)
-	UParticleSystemComponent *Splash;
+		UStaticMeshComponent* Water;
 
-	UPROPERTY(EditAnywhere, Category=ID)
-	int32 ID;
+	UPROPERTY(VisibleAnywhere)
+		UPointLightComponent* Light;
+
+	UPROPERTY(VisibleAnywhere)
+		UParticleSystemComponent* Splash;
+
+	UPROPERTY(EditAnywhere, Category = ID)
+		int32 ID;
+
+private:
+	UPROPERTY(EditAnywhere, Category = Stat, Meta = (AllowPrivateAccess = true))
+	float RotateSpeed;
 };
