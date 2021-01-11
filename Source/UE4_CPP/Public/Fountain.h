@@ -3,6 +3,7 @@
 #pragma once
 
 #include "UE4_CPP/UE4_CPP.h"
+#include "GameFramework/RotatingMovementComponent.h"
 #include "GameFramework/Actor.h"
 #include "Fountain.generated.h"
 
@@ -40,7 +41,10 @@ public:
 	UPROPERTY(EditAnywhere, Category = ID)
 		int32 ID;
 
+	UPROPERTY(VisibleAnywhere)
+		URotatingMovementComponent* Movement;
+
 private:
-	UPROPERTY(EditAnywhere, Category = Stat, Meta = (AllowPrivateAccess = true))
-	float RotateSpeed;
+	UPROPERTY(EditAnywhere, Category = ID)
+		float RotateSpeed;
 };
