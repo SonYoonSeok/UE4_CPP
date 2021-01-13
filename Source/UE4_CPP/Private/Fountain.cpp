@@ -25,6 +25,7 @@ AFountain::AFountain()
 	Splash->SetRelativeLocation(FVector(0.0f, 0.0f, 195.0f));
 
 	RotateSpeed = 30.0f;
+	Movement->RotationRate = FRotator(0.0f, RotateSpeed, 0.0f);
 
 	static ConstructorHelpers::FObjectFinder<UStaticMesh>
 		SM_BODY(TEXT("/Game/InfinityBladeGrassLands/Environments/Plains/Env_Plains_Ruins/StaticMesh/SM_Plains_Castle_Fountain_01.SM_Plains_Castle_Fountain_01"));
