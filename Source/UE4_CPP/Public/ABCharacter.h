@@ -27,7 +27,12 @@ protected:
 
 	void SetControlMode(EControlMode NewControlMode);
 	EControlMode CurrentControlMode = EControlMode::GTA;
-	FVector DirectionToMove = FVector::ZeroVector;
+	FVector DirectionToMove;
+
+	float ArmLengthTo = 0.0f;
+	FRotator ArmRotationTo = FRotator::ZeroRotator;
+	float ArmLengthSpeed = 0.0f;
+	float ArmRotationSpeed = 0.0f;
 
 public:	
 	// Called every frame
