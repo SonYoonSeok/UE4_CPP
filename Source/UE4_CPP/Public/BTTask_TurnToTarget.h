@@ -1,0 +1,21 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "UE4_CPP/UE4_CPP.h"
+#include "BehaviorTree/BTTaskNode.h"
+#include "BTTask_TurnToTarget.generated.h"
+
+/**
+ * 
+ */
+UCLASS()
+class UE4_CPP_API UBTTask_TurnToTarget : public UBTTaskNode
+{
+	GENERATED_BODY()
+	
+public:
+	UBTTask_TurnToTarget();
+	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
+	
+};
