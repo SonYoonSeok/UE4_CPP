@@ -9,6 +9,6 @@ public class UE4_CPPTarget : TargetRules
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.AddRange( new string[] { "UE4_CPP" } );
+		ExtraModuleNames.AddRange( new string[] { "UE4_CPP", "ArenaBattleSetting" } );
 	}
 }

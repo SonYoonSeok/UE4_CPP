@@ -9,6 +9,6 @@ public class UE4_CPPEditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.AddRange( new string[] { "UE4_CPP" } );
+		ExtraModuleNames.AddRange( new string[] { "UE4_CPP", "ArenaBattleSetting" } );
 	}
 }
