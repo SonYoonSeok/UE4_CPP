@@ -81,7 +81,7 @@ void AABSection::SetState(ESectionState NewState)
 	{
 	case ESectionState::READY:
 	{
-		Trigger->SetCollisionProfileName(TEXT("NoCollision"));
+		Trigger->SetCollisionProfileName(TEXT("ABTrigger"));
 		for (UBoxComponent* GateTrigger : GateTriggers)
 		{
 			GateTrigger->SetCollisionProfileName(TEXT("NoCollision"));
@@ -169,6 +169,7 @@ void AABSection::OnGateTriggerBeginOverlap(UPrimitiveComponent* OverlappedCompon
 		FCollisionShape::MakeSphere(775.0f),
 		CollisionQueryParam
 	);
+
 	if(!bResult)
 	{
 		auto NewSeciton = GetWorld()->SpawnActor<AABSection>(NewLocation, FRotator::ZeroRotator);
@@ -177,6 +178,7 @@ void AABSection::OnGateTriggerBeginOverlap(UPrimitiveComponent* OverlappedCompon
 	{
 		ABLOG(Warning, TEXT("New section area is not empty."));
 	}
+	
 }
 
 void AABSection::OnNPCSpawn()
